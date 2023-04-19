@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" translate="no">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="/favicon.png" />
+    <link rel="apple-touch-icon" type="image/png" href="/favicon.png?version=v1" />
+    <link rel="icon" type="image/png" href="/favicon.png?version=v1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+    <meta name="theme-color" content="#31CB9E" />
+    <meta name="fortmatic-site-verification" content="j93LgcVZk79qcgyo" />
+    <meta
+      name="description"
+      content="PunkSwap is DeFi’s first Dynamic Market Maker; a decentralized exchange protocol that provides frictionless crypto liquidity with extremely high flexibility and capital efficiency. PunkSwap is the first major protocol in Kyber’s liquidity hub."
+    />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <script src="/datafeeds/udf/dist/bundle.js"></script>
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="preload" as="image" href="/logo.png" />
+    <link rel="preload" as="image" href="/logo.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600&display=swap"
+      rel="preload"
+      as="style"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>PunkSwap - Swap and earn tokens at the best rates</title>
+    <link href="/static/css/main.908ff313.chunk.css" rel="stylesheet" />
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="app"></div>
+    <style class="preloadhtml-style">
+      .preloadhtml {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        font-family: 'Work Sans', 'Inter var', sans-serif;
+      }
+      [data-theme='dark'] .preloadhtml {
+        background-color: #000;
+      }
+      [data-theme='light'] .preloadhtml {
+        background-color: #f5f5f5;
+      }
+      .preloadhtml-header {
+        display: flex;
+        padding: 1rem;
+        z-index: 2;
+      }
+      [data-theme='dark'] .preloadhtml-header {
+        background-color: #1c1c1c;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      }
+      [data-theme='light'] .preloadhtml-header {
+        background-color: #fff;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      }
+      .preloadhtml-logo {
+        transition: transform 0.3s ease;
+      }
+      .preloadhtml-logo:hover {
+        transform: rotate(-5deg);
+      }
+      .preloadhtml-header-link {
+        display: flex;
+        align-items: center;
+        margin-left: 12px;
+      }
+      .preloadhtml-header-link-item {
+        padding: 8px 12px;
+        width: max-content;
+        font-weight: 500;
+        font-size: 16px;
+      }
+      [data-theme='dark'] .preloadhtml-header-link-item {
+        color: #a9a9a9;
+      }
+      [data-theme='light'] .preloadhtml-header-link-item {
+        color: #5e5e5e;
+      }
+      .preloadhtml-header-link-item-icon {
+        min-width: 14px;
+        width: 14px;
+        color: #a9a9a9;
+        margin-top: -20px;
+        transform: translate(-1px, -3.5px);
+      }
+      .preloadhtml-header-link-item-icon * {
+        color: #a9a9a9;
+        fill: currentColor;
+      }
+      .preloadhtml-logo {
+        width: 140px;
+        height: 51.38px;
+      }
+      [data-theme='dark'] .onlyVisibleInLightMode {
+        display: none;
+      }
+      [data-theme='light'] .onlyVisibleInDarkMode {
+        display: none;
+      }
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        60% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+    </style>
+    <div class="preloadhtml">
+      <div class="preloadhtml-header">
+        <div class="preloadhtml-logo">
+          <img class="onlyVisibleInDarkMode" style="margin-top: 1px" width="140px" src="/logo.png" alt="DmmLogo" />
+          <img class="onlyVisibleInLightMode" style="margin-top: 1px" width="140px" src="/logo.png" alt="DmmLogo" />
+        </div>
+        <div class="preloadhtml-header-link">
+          <div style="color: #31cb9e" class="preloadhtml-header-link-item">Swap</div>
+          <div class="preloadhtml-header-link-item">Earn</div>
+          <div class="preloadhtml-header-link-item">Farms</div>
+        </div>
+      </div>
+      <div style="height: 180px; display: flex">
+        <img
+          class="onlyVisibleInDarkMode"
+          style="animation: pulse 0.8s linear infinite; margin: auto"
+          width="160px"
+          src="/logo.png"
+          alt="Logo"
+        />
+        <img
+          class="onlyVisibleInLightMode"
+          style="animation: pulse 0.8s linear infinite; margin: auto"
+          width="160px"
+          src="/logo.png"
+          alt="Logo"
+        />
+      </div>
+    </div>
+    <script>
+      ;(() => {
+        var e
+        ;(e = !1),
+          'dark' ===
+            (function () {
+              const t = (function () {
+                const e = window.localStorage.getItem('redux_localstorage_simple_user')
+                if ('string' == typeof e)
+                  try {
+                    return JSON.parse(e).userDarkMode
+                  } catch (e) {}
+              })()
+              if ('boolean' == typeof t) return t ? 'dark' : 'light'
+              if (!1 === e) return 'dark'
+              const r = window.matchMedia('(prefers-color-scheme: dark)')
+              return 'boolean' == typeof r.matches ? (r.matches ? 'dark' : 'light') : 'dark'
+            })() && document.documentElement.setAttribute('data-theme', 'dark')
+      })()
+    </script>
+    <script src="/charting_library/charting_library.standalone.js"></script>
+    <script>
+      window.zESettings = {
+        webWidget: {
+          offset: {
+            vertical: window.innerWidth > 1200 ? '0px' : '75px',
+            mobile: { vertical: '65px', horizontal: '-5px' },
+          },
+          zIndex: 3,
+        },
+      }
+    </script>
+    <script async src="/libs/zenddesk.js?key=a73faacd-ba50-493a-8bf5-4b6878035346" id="ze-snippet"></script>
+    <script>
+      !(function (e) {
+        function t(t) {
+          for (var a, o, d = t[0], p = t[1], i = t[2], l = 0, f = []; l < d.length; l++)
+            (o = d[l]), Object.prototype.hasOwnProperty.call(c, o) && c[o] && f.push(c[o][0]), (c[o] = 0)
+          for (a in p) Object.prototype.hasOwnProperty.call(p, a) && (e[a] = p[a])
+          for (u && u(t); f.length; ) f.shift()()
+          return n.push.apply(n, i || []), r()
+        }
+        function r() {
+          for (var e, t = 0; t < n.length; t++) {
+            for (var r = n[t], a = !0, o = 1; o < r.length; o++) {
+              var p = r[o]
+              0 !== c[p] && (a = !1)
+            }
+            a && (n.splice(t--, 1), (e = d((d.s = r[0]))))
+          }
+          return e
+        }
+        var a = {},
+          o = { 19: 0 },
+          c = { 19: 0 },
+          n = []
+        function d(t) {
+          if (a[t]) return a[t].exports
+          var r = (a[t] = { i: t, l: !1, exports: {} })
+          return e[t].call(r.exports, r, r.exports, d), (r.l = !0), r.exports
+        }
+        ;(d.e = function (e) {
+          var t = []
+          o[e]
+            ? t.push(o[e])
+            : 0 !== o[e] &&
+              { 4: 1 }[e] &&
+              t.push(
+                (o[e] = new Promise(function (t, r) {
+                  for (
+                    var a =
+                        'static/css/' +
+                        ({
+                          0: 'add-liquidity-page~create-pool-page~redirect-create-pool-duplicate-token-ids-page~redirect-old-creat~97c95ca7',
+                          1: 'add-liquidity-page~my-pool-page~pool-finder-page~remove-liquidity-page',
+                          2: 'create-pool-page',
+                          3: 'swapv2-page~swapv3-page',
+                          4: 'vendors~swapv2-page~swapv3-page',
+                          7: 'about-knc',
+                          8: 'about-page',
+                          9: 'add-liquidity-page',
+                          10: 'elastic-remove-liquidity-page',
+                          13: 'my-pool-page',
+                          14: 'pool-finder-page',
+                          15: 'pools-page',
+                          16: 'redirect-create-pool-duplicate-token-ids-page',
+                          17: 'redirect-old-create-pool-path-structure-page',
+                          18: 'remove-liquidity-page',
+                          21: 'swapv2-page',
+                          22: 'swapv3-page',
+                          23: 'yield-page',
+                        }[e] || e) +
+                        '.' +
+                        {
+                          0: '31d6cfe0',
+                          1: '31d6cfe0',
+                          2: '31d6cfe0',
+                          3: '31d6cfe0',
+                          4: '553dd249',
+                          5: '31d6cfe0',
+                          6: '31d6cfe0',
+                          7: '31d6cfe0',
+                          8: '31d6cfe0',
+                          9: '31d6cfe0',
+                          10: '31d6cfe0',
+                          13: '31d6cfe0',
+                          14: '31d6cfe0',
+                          15: '31d6cfe0',
+                          16: '31d6cfe0',
+                          17: '31d6cfe0',
+                          18: '31d6cfe0',
+                          21: '31d6cfe0',
+                          22: '31d6cfe0',
+                          23: '31d6cfe0',
+                          24: '31d6cfe0',
+                          25: '31d6cfe0',
+                          26: '31d6cfe0',
+                          27: '31d6cfe0',
+                          28: '31d6cfe0',
+                          29: '31d6cfe0',
+                          30: '31d6cfe0',
+                          31: '31d6cfe0',
+                          32: '31d6cfe0',
+                          33: '31d6cfe0',
+                          34: '31d6cfe0',
+                        }[e] +
+                        '.chunk.css',
+                      c = d.p + a,
+                      n = document.getElementsByTagName('link'),
+                      p = 0;
+                    p < n.length;
+                    p++
+                  ) {
+                    var i = (u = n[p]).getAttribute('data-href') || u.getAttribute('href')
+                    if ('stylesheet' === u.rel && (i === a || i === c)) return t()
+                  }
+                  var l = document.getElementsByTagName('style')
+                  for (p = 0; p < l.length; p++) {
+                    var u
+                    if ((i = (u = l[p]).getAttribute('data-href')) === a || i === c) return t()
+                  }
+                  var f = document.createElement('link')
+                  ;(f.rel = 'stylesheet'),
+                    (f.type = 'text/css'),
+                    (f.onload = t),
+                    (f.onerror = function (t) {
+                      var a = (t && t.target && t.target.src) || c,
+                        n = new Error('Loading CSS chunk ' + e + ' failed.\n(' + a + ')')
+                      ;(n.code = 'CSS_CHUNK_LOAD_FAILED'),
+                        (n.request = a),
+                        delete o[e],
+                        f.parentNode.removeChild(f),
+                        r(n)
+                    }),
+                    (f.href = c),
+                    document.getElementsByTagName('head')[0].appendChild(f)
+                }).then(function () {
+                  o[e] = 0
+                })),
+              )
+          var r = c[e]
+          if (0 !== r)
+            if (r) t.push(r[2])
+            else {
+              var a = new Promise(function (t, a) {
+                r = c[e] = [t, a]
+              })
+              t.push((r[2] = a))
+              var n,
+                p = document.createElement('script')
+              ;(p.charset = 'utf-8'),
+                (p.timeout = 120),
+                d.nc && p.setAttribute('nonce', d.nc),
+                (p.src = (function (e) {
+                  return (
+                    d.p +
+                    'static/js/' +
+                    ({
+                      0: 'add-liquidity-page~create-pool-page~redirect-create-pool-duplicate-token-ids-page~redirect-old-creat~97c95ca7',
+                      1: 'add-liquidity-page~my-pool-page~pool-finder-page~remove-liquidity-page',
+                      2: 'create-pool-page',
+                      3: 'swapv2-page~swapv3-page',
+                      4: 'vendors~swapv2-page~swapv3-page',
+                      7: 'about-knc',
+                      8: 'about-page',
+                      9: 'add-liquidity-page',
+                      10: 'elastic-remove-liquidity-page',
+                      13: 'my-pool-page',
+                      14: 'pool-finder-page',
+                      15: 'pools-page',
+                      16: 'redirect-create-pool-duplicate-token-ids-page',
+                      17: 'redirect-old-create-pool-path-structure-page',
+                      18: 'remove-liquidity-page',
+                      21: 'swapv2-page',
+                      22: 'swapv3-page',
+                      23: 'yield-page',
+                    }[e] || e) +
+                    '.' +
+                    {
+                      0: '7284f0a7',
+                      1: '394ba89e',
+                      2: 'e8703003',
+                      3: 'd86b73ec',
+                      4: 'a872edc9',
+                      5: 'bbc7c8f6',
+                      6: 'd01df732',
+                      7: '26579029',
+                      8: '249e6663',
+                      9: '85442688',
+                      10: 'c8b45106',
+                      13: '970db292',
+                      14: 'e781dbec',
+                      15: '974ebb55',
+                      16: '95a505b7',
+                      17: 'e78a6747',
+                      18: '37b8bece',
+                      21: '2b93e377',
+                      22: 'cd6f2467',
+                      23: '1aa74600',
+                      24: '0b3095c3',
+                      25: '7646fc80',
+                      26: 'ce2d1e2e',
+                      27: '0af35afe',
+                      28: 'babed600',
+                      29: '01aac2fb',
+                      30: '251dbd3d',
+                      31: 'd8f121d8',
+                      32: '29684dcb',
+                      33: 'd8cc90e0',
+                      34: '945c798a',
+                    }[e] +
+                    '.chunk.js'
+                  )
+                })(e))
+              var i = new Error()
+              n = function (t) {
+                ;(p.onerror = p.onload = null), clearTimeout(l)
+                var r = c[e]
+                if (0 !== r) {
+                  if (r) {
+                    var a = t && ('load' === t.type ? 'missing' : t.type),
+                      o = t && t.target && t.target.src
+                    ;(i.message = 'Loading chunk ' + e + ' failed.\n(' + a + ': ' + o + ')'),
+                      (i.name = 'ChunkLoadError'),
+                      (i.type = a),
+                      (i.request = o),
+                      r[1](i)
+                  }
+                  c[e] = void 0
+                }
+              }
+              var l = setTimeout(function () {
+                n({ type: 'timeout', target: p })
+              }, 12e4)
+              ;(p.onerror = p.onload = n), document.head.appendChild(p)
+            }
+          return Promise.all(t)
+        }),
+          (d.m = e),
+          (d.c = a),
+          (d.d = function (e, t, r) {
+            d.o(e, t) || Object.defineProperty(e, t, { enumerable: !0, get: r })
+          }),
+          (d.r = function (e) {
+            'undefined' != typeof Symbol &&
+              Symbol.toStringTag &&
+              Object.defineProperty(e, Symbol.toStringTag, { value: 'Module' }),
+              Object.defineProperty(e, '__esModule', { value: !0 })
+          }),
+          (d.t = function (e, t) {
+            if ((1 & t && (e = d(e)), 8 & t)) return e
+            if (4 & t && 'object' == typeof e && e && e.__esModule) return e
+            var r = Object.create(null)
+            if (
+              (d.r(r), Object.defineProperty(r, 'default', { enumerable: !0, value: e }), 2 & t && 'string' != typeof e)
+            )
+              for (var a in e)
+                d.d(
+                  r,
+                  a,
+                  function (t) {
+                    return e[t]
+                  }.bind(null, a),
+                )
+            return r
+          }),
+          (d.n = function (e) {
+            var t =
+              e && e.__esModule
+                ? function () {
+                    return e.default
+                  }
+                : function () {
+                    return e
+                  }
+            return d.d(t, 'a', t), t
+          }),
+          (d.o = function (e, t) {
+            return Object.prototype.hasOwnProperty.call(e, t)
+          }),
+          (d.p = '/'),
+          (d.oe = function (e) {
+            throw (console.error(e), e)
+          })
+        var p = (this['webpackJsonp@kyberswap/interface'] = this['webpackJsonp@kyberswap/interface'] || []),
+          i = p.push.bind(p)
+        ;(p.push = t), (p = p.slice())
+        for (var l = 0; l < p.length; l++) t(p[l])
+        var u = i
+        r()
+      })([])
+    </script>
+    <script src="/static/js/solana.98999129.chunk.js"></script>
+    <script src="/static/js/ethers.a102a1b7.chunk.js"></script>
+    <script src="/static/js/main.a973b1ec.chunk.js"></script>
+  </body>
+</html>

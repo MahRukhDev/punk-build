@@ -1,0 +1,20 @@
+{
+  "short_name": "PunkSwap",
+  "name": "PunkSwap",
+  "icons": [
+    {
+      "src": "./favicon.svg?version=1",
+      "sizes": "any",
+      "purpose": "any maskable"
+    }
+  ],
+  "orientation": "portrait",
+  "display": "standalone",
+  "background_color": "#fff",
+  "providedBy": {
+    "name": "PunkSwap"
+  },
+  "start_url": ".",
+  "theme_color": "#31cb9e",
+  "description": "Swap and earn tokens at the best rates"
+}
